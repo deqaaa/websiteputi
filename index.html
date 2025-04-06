@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebsitePutideqa</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .wrapper {
+        display: flex;
+        flex: 1;
+        width: 100%;
+      }
+
+      .sidebar {
+        width: 250px;
+        background: #50abe7;
+        padding: 20px;
+        color: rgba(206, 71, 47, 0.63);
+      }
+
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .sidebar ul li {
+        margin: 10px 0;
+      }
+
+      .sidebar ul li a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+      }
+
+      .content {
+        flex: 1;
+        padding: 20px;
+        background: #6cbde;
+        height: max-content;
+      }
+
+      .content-section {
+        background: rgb(58, 139, 185);
+        padding: 20px;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .content-section p {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      #materi {
+        color: rgb(68, 23, 157);
+      }
+
+      .footer {
+        background: #daf4fc;
+        color: rgb(19, 2, 2);
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        font-weight: bold;
+      }
+
+      .card-img-top {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .container {
+        margin-top: 20px;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .col-md-4 {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-body {
+        padding: 15px;
+      }
+
+      .card-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .card-text {
+        font-size: 16px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <ul>
+          <li><a href="#" onclick="showContent('home')">Home</a></li>
+          <li><a href="#" onclick="showContent('about')">Tentang</a></li>
+          <li><a href="#" onclick="showContent('contact')">Kontak</a></li>
+          <li><a href="#" onclick="showContent('materi')">Materi Ajar</a></li>
+        </ul>
+      </aside>
+      <main class="content">
+        <section id="home" class="content-section">
+          <h1>Selamat Datang Di Halaman Home</h1>
+          <p>Ini adalah halaman utama yang berisi informasi terkini.</p>
+          <p>Silakan jelajahi menu untuk melihat halaman lainnya.</p>
+        </section>
+
+        <section id="about" class="content-section" style="display: none">
+          <h1>Ini adalah halaman Tentang.</h1>
+          <p>Website ini dibuat untuk memberikan informasi berguna.</p>
+          <p>Kami berkomitmen untuk menyajikan konten berkualitas.</p>
+          <p>
+            Pada halaman ini ada beberapa kegiatan yang saya masukkan selama
+            libur.
+          </p>
+
+          <div class="container">
+            <h2 class="text-center mb-4">Kegiatan Saya</h2>
+            <hr />
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4">
+                  <img
+                    src="image/img1.jpeg"
+                    class="card-img-top"
+                    alt="Kegiatan 1"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Kegiatan 1</h5>
+                    <p class="card-text">
+                      Setelah libur, saya dan teman-teman sepakat buat ngumpul
+                      bareng. Kita akhirnya mutusin buat bukber bareng, ngobrol
+                      santai, ketawa bareng, dan tentunya nikmatin makanan enak.
+                      Lanjut jalan-jalan ke mall sambil belanja dan foto-foto.
+                      Seru banget!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card mb-4">
+                  <img
+                    src="image/img2.jpeg"
+                    class="card-img-top"
+                    alt="Kegiatan 2"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Kegiatan 2</h5>
+                    <p class="card-text">
+                      Foto ini diambil setelah sholat Idul Fitri. Suasana hangat
+                      dan penuh kebahagiaan. Saling maaf-maafan dan foto bareng
+                      jadi momen yang berkesan dan penuh makna.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card mb-4">
+                  <img
+                    src="image/img3.jpeg"
+                    class="card-img-top"
+                    alt="Kegiatan 3"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Kegiatan 3</h5>
+                    <p class="card-text">
+                      Bertemu sahabat lama setelah sekian lama. Banyak cerita,
+                      tawa, dan nostalgia. Kami ngobrol soal kuliah, skripsi,
+                      dan perjuangan menjelang kelulusan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="content-section" style="display: none">
+          <h1>Ini adalah halaman Kontak.</h1>
+          <p>
+            Silakan hubungi kami melalui email di
+            <a href="mailto:deqaann@gmail.com">deqaann@gmail.com</a>
+          </p>
+          <p>Atau kunjungi WhatsApp saya.</p>
+          <a
+            href="https://web.whatsapp.com/"
+            target="_blank"
+            style="
+              display: inline-block;
+              padding: 10px 20px;
+              background-color: #25d366;
+              color: white;
+              text-decoration: none;
+              border-radius: 5px;
+              font-weight: bold;
+            "
+          >
+            Hubungi via WhatsApp
+          </a>
+        </section>
+
+        <section id="materi" class="content-section" style="display: none">
+          <h1>Materi Pembelajaran Web Programming</h1>
+          <p>1. Materi Semantic HTML</p>
+          <p>2. Materi CSS</p>
+          <p>3. Materi Penulisan CSS</p>
+          <p>4. Materi CSS Modern dan Responsive</p>
+          <p>5. Materi JavaScript</p>
+          <p>6. Materi Ajax</p>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Desain by Puti Deqa Annisa G</p>
+    </footer>
+
+    <script>
+      function showContent(sectionId) {
+        let sections = document.querySelectorAll(".content-section");
+        sections.forEach((section) => (section.style.display = "none"));
+        document.getElementById(sectionId).style.display = "block";
+      }
+    </script>
+  </body>
+</html>
